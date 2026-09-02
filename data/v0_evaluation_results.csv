@@ -1,0 +1,14 @@
+case_id,predicted,expected,correct,symptoms,severity
+emergency_1,Emergency,Emergency,True,"Chest pain, difficulty breathing [simulation: emergency]",severe
+emergency_2,Emergency,Emergency,True,Loss of consciousness [simulation: emergency],severe
+emergency_3,Emergency,Emergency,True,Severe allergic reaction [simulation: emergency],severe
+urgent_1,Urgent,Urgent,True,High fever and confusion [simulation: urgent],moderate
+urgent_2,Urgent,Urgent,True,Severe headache and stiff neck [simulation: urgent],moderate
+urgent_3,Urgent,Urgent,True,Persistent vomiting [simulation: urgent],moderate
+routine_1,Routine,Routine,True,Mild headache,mild
+routine_2,Routine,Routine,True,Cough and mild cold symptoms,mild
+routine_3,Routine,Routine,True,Minor skin rash,mild
+routine_4,Routine,Routine,True,Back pain from sitting,moderate
+edge_1,Routine,Urgent,False,Severe pain in leg but no tag,severe
+edge_2,Routine,Urgent,False,Persistent cough for weeks,mild
+edge_3,Routine,Urgent,False,Moderate fever for 5 days,moderate

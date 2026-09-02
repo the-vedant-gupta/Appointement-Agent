@@ -6,7 +6,9 @@ against expected clinical routing to measure accuracy.
 BLIND TEST: v0 is NOT given expected outcomes; it makes predictions independently.
 """
 
+import csv
 from dataclasses import dataclass
+from pathlib import Path
 from v0 import (
     PatientInput,
     extract_information,
@@ -137,6 +139,8 @@ EXPECTED_OUTCOMES = {
     "edge_3": "Urgent",  # Moderate + 5 days - should be Urgent (v0 will fail)
 }
 
+RESULT_PATH = Path(__file__).parents[1] / "data" / "v0_evaluation_results.csv"
+
 
 def evaluate_v0() -> dict:
     """Run v0 against all patient cases in a BLIND TEST.
@@ -263,4 +267,9 @@ def evaluate_v0() -> dict:
 
 
 if __name__ == "__main__":
-    evaluate_v0()
+    report = evaluate_v0()
+    with RESULT_PATH.open("w", newline="", encoding="utf-8") as destination:
+        writer = csv.DictWriter(destination, fieldnames=report["results"][0])
+        writer.writeheader()
+        writer.writerows(report["results"])
+    print(f"\nSaved v0 evaluation results: {RESULT_PATH}")
