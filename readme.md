@@ -1,45 +1,150 @@
-# Appointment Agent
+# Appointment Agent: AI-Driven Medical Triage Under Uncertainty
 
-## Problem
+An AI agent research project designed to route patient appointments to routine, urgent, or emergency care pathways while handling incomplete or uncertain patient information safely and responsibly.
 
-Design an AI agent that selects routine, urgent, or emergency
-care routing without attempting to diagnose the patient.
+## 🎯 Problem Statement
 
-The agent must make decisions when patient information is incomplete
-or uncertain.
+Healthcare systems need intelligent routing mechanisms that can:
+- **Route patients appropriately** to routine, urgent, or emergency care
+- **Avoid diagnosis** while making safe triage decisions
+- **Handle uncertainty** when patient information is incomplete
+- **Make cost-aware decisions** balancing under-triage and over-triage risks
 
-## Research Question
+This project explores how AI can make safe routing decisions under uncertainty without overstepping into medical diagnosis.
 
-How should an AI agent make a safe routing decision when patient
-information is incomplete or uncertain?
+## 🔬 Research Question
 
-## Possible Actions
+**How should an AI agent make a safe routing decision when patient information is incomplete or uncertain?**
 
-1. Routine routing
-2. Urgent routing
-3. Emergency routing
-4. Ask for more information
-5. Escalate to a human
-
-## Main Research Areas
+### Key Research Areas
 
 - Decision-making under uncertainty
-- AI triage
-- Bayesian reasoning
-- Decision theory
-- Cost-sensitive classification
-- Under-triage
-- Over-triage
-- Human-in-the-loop AI
-- Uncertainty estimation
-- Safety evaluation
+- AI triage and risk assessment
+- Bayesian reasoning and probabilistic inference
+- Decision theory and cost-sensitive classification
+- Under-triage vs. over-triage trade-offs
+- Human-in-the-loop AI systems
+- Uncertainty estimation and safety evaluation
 
-## Week 1 Goal
+## 📋 Possible Agent Actions
 
-Build and evaluate a small simulation of an uncertainty-aware
-appointment/triage agent using 30–50 test cases.
+1. **Routine routing** - Standard appointment scheduling
+2. **Urgent routing** - Accelerated scheduling (within 24-48 hours)
+3. **Emergency routing** - Immediate care referral
+4. **Ask for more information** - Request additional patient details
+5. **Escalate to human** - Defer to medical professional judgment
 
-## Safety Boundary
+## 📁 Project Structure
 
-This project is a research prototype. It does not diagnose
-medical conditions or provide medical advice.
+```
+Appointement-Agent/
+├── src/                          # Python source code
+│   ├── agent/                    # Agent implementation
+│   ├── models/                   # Decision models
+│   └── utils/                    # Utility functions
+├── data/                         # Test cases and datasets
+├── architecture/                 # System architecture documentation
+├── review record/                # Review and evaluation records
+├── probability-decision-record.md # Probability analysis & decisions
+├── research-file.md              # Detailed research findings
+├── readme.md                     # This file
+└── .gitignore
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.8 or higher
+- pip or conda package manager
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/the-vedant-gupta/Appointement-Agent.git
+cd Appointement-Agent
+
+# Install dependencies (create requirements.txt if needed)
+pip install -r requirements.txt
+```
+
+### Running the Agent
+
+```bash
+# Run the main agent simulation
+python src/main.py
+
+# Run tests
+python -m pytest tests/
+```
+
+## 📊 Week 1 Goal
+
+Build and evaluate a small simulation of an uncertainty-aware appointment/triage agent using **30–50 test cases**.
+
+**Objectives:**
+- [ ] Implement baseline decision logic
+- [ ] Create test dataset (30-50 scenarios)
+- [ ] Evaluate routing accuracy
+- [ ] Assess under-triage and over-triage rates
+- [ ] Document uncertainty handling approach
+
+## 🔐 Safety & Disclaimers
+
+### Safety Boundary
+⚠️ **This project is a research prototype.** It:
+- Does **NOT** diagnose medical conditions
+- Does **NOT** provide medical advice
+- Is **NOT** intended for clinical use
+- Should **NOT** replace professional medical judgment
+
+This system is designed for research and evaluation purposes only.
+
+## 📚 Key Documentation
+
+- **[Probability Decision Record](probability-decision-record.md)** - Detailed probability analysis, decision thresholds, and reasoning
+- **[Research File](research-file.md)** - Comprehensive research findings, literature review, and analysis
+
+## 🧪 Evaluation Metrics
+
+The agent will be evaluated on:
+- **Routing accuracy** - Correct category assignment
+- **Under-triage rate** - Cases incorrectly classified as less urgent
+- **Over-triage rate** - Cases incorrectly classified as more urgent
+- **Escalation rate** - Appropriate human-in-the-loop decisions
+- **Uncertainty quantification** - Quality of confidence estimates
+
+## 🤝 Contributing
+
+Contributions are welcome! Please:
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit changes (`git commit -m "Add improvement"`)
+4. Push to branch (`git push origin feature/improvement`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is provided as-is for research purposes. See LICENSE file for details.
+
+## 📧 Contact & Support
+
+For questions or feedback:
+- Open an issue on GitHub
+- Review documentation in the `architecture/` directory
+- Check existing research records
+
+## 🔗 Related Work
+
+This project draws from research in:
+- Medical decision support systems
+- Uncertainty quantification in AI
+- Triage protocols and algorithms
+- Human-AI collaboration
+- Safety-critical AI systems
+
+---
+
+**Last Updated:** September 2, 2026
+
+**Status:** Active Research Phase 1
