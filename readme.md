@@ -40,8 +40,6 @@ This project explores how AI can make safe routing decisions under uncertainty w
 Appointement-Agent/
 ├── src/                          # Python source code
 │   ├── agent/                    # Agent implementation
-│   ├── models/                   # Decision models
-│   └── utils/                    # Utility functions
 ├── data/                         # Test cases and datasets
 ├── architecture/                 # System architecture documentation
 ├── review record/                # Review and evaluation records
@@ -56,38 +54,17 @@ Appointement-Agent/
 ### Prerequisites
 - Python 3.8 or higher
 - pip or conda package manager
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/the-vedant-gupta/Appointement-Agent.git
-cd Appointement-Agent
-
-# Install dependencies (create requirements.txt if needed)
-pip install -r requirements.txt
-```
-
-### Running the Agent
-
-```bash
-# Run the main agent simulation
-python src/main.py
-
-# Run tests
-python -m pytest tests/
-```
-
-## 📊 Week 1 Goal
+- 
+## 📊 Goal
 
 Build and evaluate a small simulation of an uncertainty-aware appointment/triage agent using **30–50 test cases**.
 
 **Objectives:**
-- [ ] Implement baseline decision logic
-- [ ] Create test dataset (30-50 scenarios)
-- [ ] Evaluate routing accuracy
-- [ ] Assess under-triage and over-triage rates
-- [ ] Document uncertainty handling approach
+-  Implement baseline decision logic
+-  Create test dataset (30-50 scenarios)
+-  Evaluate routing accuracy
+-  Assess under-triage and over-triage rates
+-  Document uncertainty handling approach
 
 ## 🔐 Safety & Disclaimers
 
@@ -126,13 +103,6 @@ Contributions are welcome! Please:
 ## 📝 License
 
 This project is provided as-is for research purposes. See LICENSE file for details.
-
-## 📧 Contact & Support
-
-For questions or feedback:
-- Open an issue on GitHub
-- Review documentation in the `architecture/` directory
-- Check existing research records
 
 ## 🔗 Related Work
 
