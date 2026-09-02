@@ -111,11 +111,6 @@ The initial evidence variables are:
 - Time / duration
 - Severity
 The agent may receive incomplete, unclear, or contradictory evidence.
-### Decision
-Prior                  → DECIDED
-Condition likelihood   → DECIDED (synthetic)
-Duration likelihood    → NEXT
-Severity likelihood    → AFTER THAT
 #### Research Questions
 1. How can likelihoods be estimated for clinical triage?
 2. What data can provide evidence-to-state relationships?
@@ -123,10 +118,9 @@ Severity likelihood    → AFTER THAT
    variables?
 4. How should missing evidence affect the model?
 5. How should contradictory evidence be handled?
+### Synthetic Symptom Likelihoods
 
-### Synthetic Condition/Symptom Likelihoods
-
-For the initial simulation, condition/symptom evidence will be represented using three abstract categories:
+For the initial simulation, symptom evidence will be represented using three abstract categories:
 - Lower-concern
 - Intermediate
 - Higher-concern
