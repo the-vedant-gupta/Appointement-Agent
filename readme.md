@@ -1,7 +1,7 @@
 # Appointment Agent: AI-Driven Medical Triage Under Uncertainty
 
 ## Problem Statement
-An AI agent research project designed to route patient appointments to routine, urgent, or emergency care pathways while handling incomplete or uncertain patient information safely and responsibly.
+An AI agent designed to route patient appointments to routine, urgent, or emergency care pathways while handling incomplete or uncertain patient information safely and responsibly.
 
 **Objectives:**
 - **Route patients appropriately** to routine, urgent, or emergency care
