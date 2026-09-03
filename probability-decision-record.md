@@ -1,48 +1,21 @@
 # Probability Decision Record — AI Appointment/Triage Agent
 
 ## 1. Decision Problem
-
-The agent must select a care-routing action when patient information is
-incomplete or uncertain.
+The main research problem is: How should the agent make a safe routing decision when the available patient information does not completely reveal the appropriate urgency?
 
 The routing levels are:
-
 - Routine
 - Urgent
 - Emergency
 
-The agent does not diagnose the patient's medical condition.
-
-The main research problem is:
-
-> How should the agent make a safe routing decision when the available
-> patient information does not completely reveal the appropriate urgency?
-
-The agent may also:
-
-- ask for more information; or
-- escalate the case to a human.
-
 ## 2. Hidden States
-
-The initial model represents the patient's underlying urgency as a hidden
-state.
-
-The three initial hidden states are:
 
 - Low urgency
 - Medium urgency
 - High urgency
 
-The agent cannot directly observe the hidden state.
-
-Instead, it estimates the hidden state from the available evidence.
 
 ## 3. Observable Evidence
-
-The agent receives patient-provided information.
-
-The initial evidence variables are:
 
 - Condition / symptoms
 - Time / duration
@@ -55,13 +28,9 @@ Evidence may be:
 - unclear; or
 - contradictory.
 
-The agent uses the available evidence to estimate the probability of
-each hidden urgency state.
-
 ## 4. Belief State
 
-For observed evidence E, the agent maintains a probability distribution
-over the hidden urgency states:
+For observed evidence E, the agent maintains a probability distribution over the hidden urgency states:
 
 P(Low urgency | E)
 
@@ -69,15 +38,6 @@ P(Medium urgency | E)
 
 P(High urgency | E)
 
-These probabilities represent the agent's current belief about the
-underlying urgency state.
-
-The probabilities should sum to 1.
-For example:
-			P(Low | E)    = 0.60
-			P(Medium | E) = 0.30
-			P(High | E)   = 0.10
-These values are illustrative only and are not medical probabilities.
 ## 5. Prior Probability
 
 #### Decision
@@ -89,37 +49,23 @@ The prior probabilities are:
 - P(High urgency) = 0.34
 The probabilities sum to 1:
 				P(Low) + P(Medium) + P(High) = 1.00
-#### Rationale
-A near-uniform prior is used so that the initial simulation does not strongly favor one urgency state before evidence is observed.
-These values are **synthetic simulation assumptions**. They are not clinical probabilities and do not represent the real distribution of patients across urgency levels.
 
-A future version may replace these assumptions with a dataset-derived or empirically supported prior.
 ## 6. Likelihood
 
-#### Definition
-Likelihood represents how compatible an observed piece of evidence is with each possible hidden urgency state.
 For evidence E, the model considers:
 		P(E | Low urgency)
 		P(E | Medium urgency)
 		P(E | High urgency)
-These values describe how frequently the evidence would be expected under
-each hidden state.
+
+		
 #### Evidence Currently Considered
 
 The initial evidence variables are:
 - Condition / symptoms
 - Time / duration
 - Severity
-The agent may receive incomplete, unclear, or contradictory evidence.
-#### Research Questions
-1. How can likelihoods be estimated for clinical triage?
-2. What data can provide evidence-to-state relationships?
-3. Can likelihoods be estimated separately for different evidence
-   variables?
-4. How should missing evidence affect the model?
-5. How should contradictory evidence be handled?
-### Synthetic Symptom Likelihoods
 
+### Synthetic Symptom Likelihoods
 For the initial simulation, symptom evidence will be represented using three abstract categories:
 - Lower-concern
 - Intermediate
