@@ -54,7 +54,7 @@ Appointement-Agent/
 ### Prerequisites
 - Python 3.8 or higher
 - pip or conda package manager
-- 
+
 ## Goal
 
 Build and evaluate a small simulation of an uncertainty-aware appointment/triage agent using **30–50 test cases**.
